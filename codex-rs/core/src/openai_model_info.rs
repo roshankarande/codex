@@ -82,6 +82,16 @@ pub(crate) fn get_model_info(model_family: &ModelFamily) -> Option<ModelInfo> {
             max_output_tokens: 100_000,
         }),
 
+        "azure::gpt-4.1" => Some(ModelInfo {
+            context_window: 200_000,
+            max_output_tokens: 100_000,
+        }),
+
+        "vertexai::gemini-2.5-flash" => Some(ModelInfo {
+            context_window: 200_000,
+            max_output_tokens: 100_000,
+        }),
+
         _ => None,
     }
 }
